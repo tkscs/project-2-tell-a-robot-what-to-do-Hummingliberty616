@@ -12,23 +12,69 @@ while True:
         current_input = input("What do you want to do?")
 
     if current_state == "idle":
-        if current_input == "spin clockwise please":
+        if current_input == "Spin clockwise please":
             while True:
-                robot.right(90)
+                robot.left_sonar
+                robot.right_sonar
+                if robot.left_sonar > 10:
+                    if robot.right_sonar > 10:
+                        robot.right(90)
+                else: break
                 stop = input("Stop?")
                 if stop == "Yes":
                     break
         if current_input == "spin clockwise":
-            print("AH AH AH! YOU DIDN'T SAY THE MAGIC WORD!")
+            pass
+        
+        if current_input == "Spin counterclockwise":
+            while True: 
+                robot.right(90)
+                stop = input("Stop?")
+                if stop == "Yes":
+                    break
+
         if current_input == "spin counterclockwise":
-            while True:
-                #Do 
+            pass
     
-        if current_input == "Make animal sounds":
+        if current_input == "Make animal sounds please":
             animal = input("Which animal?")
             if animal == "dog":
                 #Bark
             if animal == "cat":
                 #meow
+            if animal == "parrot":
+                #Talk 
+
+        if current_input == "Forward":
+            robot.left_sonar
+            robot.right_sonar
+            if robot.left_sonar () > 50:
+                if robot.right_sonar > 50:
+                    robot.forward(50)
+            else: 
+                pass
+        if current_input == "Sherbet lemon, please":
+            robot.left_sonar
+            robot.right_sonar
+            if robot.left_sonar () > 50:
+                if robot.right_sonar > 50:
+                    for i in range (100):
+                        robot.forward(1)
+                        robot.backward(1)
+
+        if current_input == "Sherbet lemon":
+             
+                    
+       
+            
+
+        
+
+        
+
+        
+
+        
+
               
 
