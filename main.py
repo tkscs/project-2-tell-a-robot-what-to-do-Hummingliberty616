@@ -11,7 +11,7 @@ while True:
     if current_state == "idle":
         current_input = input("What do you want to do?")
 
-    if current_state == "idle":
+    elif current_state == "idle":
         if current_input == "Spin clockwise please":
             while True:
                 robot.left_sonar
@@ -23,29 +23,29 @@ while True:
                 stop = input("Stop?")
                 if stop == "Yes":
                     break
-        if current_input == "spin clockwise":
+        elif current_input == "spin clockwise":
             pass
         
-        if current_input == "Spin counterclockwise":
+        elif current_input == "Spin counterclockwise":
             while True: 
                 robot.right(90)
                 stop = input("Stop?")
                 if stop == "Yes":
                     break
 
-        if current_input == "spin counterclockwise":
+        elif current_input == "spin counterclockwise":
             pass
     
-        if current_input == "Make animal sounds please":
+        elif current_input == "Make animal sounds please":
             animal = input("Which animal?")
             if animal == "dog":
                 #Bark
-            if animal == "cat":
+            elif animal == "cat":
                 #meow
-            if animal == "parrot":
+            elif animal == "parrot":
                 #Talk 
-
-        if current_input == "Forward":
+        
+        elif current_input == "Forward":
             robot.left_sonar
             robot.right_sonar
             if robot.left_sonar () > 50:
@@ -53,7 +53,7 @@ while True:
                     robot.forward(50)
             else: 
                 pass
-        if current_input == "Sherbet lemon, please":
+        elif current_input == "Sherbet lemon, please":
             robot.left_sonar
             robot.right_sonar
             if robot.left_sonar () > 50:
@@ -62,7 +62,7 @@ while True:
                         robot.forward(1)
                         robot.backward(1)
 
-        if current_input == "Sherbet lemon":
+        elif current_input == "Sherbet lemon":
              
                     
        
